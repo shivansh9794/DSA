@@ -42,6 +42,8 @@ public class ex4TopTwoScore {
         for (int i : firstSecond) {
             System.out.print(i + " ");
         }
+
+        System.out.println("hello this is answer");
     }
 
 }
