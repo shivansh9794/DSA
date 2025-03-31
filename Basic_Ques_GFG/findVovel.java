@@ -9,7 +9,7 @@ public class findVovel {
         else{
             System.out.println("Not a Vowel");
         }
-        
+
     } 
     public static void main(String[] args) {
         
