@@ -11,7 +11,7 @@ public class printWithouSpace {
         String a = scn.nextLine();
         String b = scn.nextLine();
         // Write your code below that prints ab
-
+        a.
         System.out.println("data==>"+a.trim()+b.trim());
     }
 
