@@ -6,22 +6,29 @@ class Node {
 
 public class SinglyLinkedList1 {
     
-    Node head;
-    Node tail;
+    static Node head;
+    // Node tail;
     int size=0;
 
     Node createSinglyLinkedList(int NodeValue){
-
     
         Node node1=new Node();
 
-        node1.value=NodeValue;
-        node1.next=null;
+        if(head==null){
+            head.value= NodeValue;
+            head.next=null;
+        }
+        else{
+            head.value=NodeValue;
+            head.next.next=null;
+            size++;
+        }
 
-        head=node1;
-        tail=node1;
+        // node1.value=NodeValue;
+        // node1.next=null;
 
-        size++;
+        // head=node1;
+        // tail=node1;
 
         return head;
 
@@ -32,7 +39,12 @@ public class SinglyLinkedList1 {
 
         SinglyLinkedList1 sll = new SinglyLinkedList1();
         sll.createSinglyLinkedList(2);
-        System.out.println(sll.head.value);
+        sll.createSinglyLinkedList(4);
+
+        while(head!=null){
+            System.out.println(head.value);
+            head=head.next;
+        }
 
 
     }
