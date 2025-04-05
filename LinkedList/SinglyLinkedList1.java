@@ -1,51 +1,51 @@
 class Node {
     int value;
     Node next;
+
+    Node(int data) {
+        this.value = data;
+        this.next = null;
+    }
 }
 
+class LinkedList{
 
-public class SinglyLinkedList1 {
-    
-    static Node head;
-    // Node tail;
-    int size=0;
+    Node head;
 
-    Node createSinglyLinkedList(int NodeValue){
-    
-        Node node1=new Node();
-
-        if(head==null){
-            head.value= NodeValue;
-            head.next=null;
-        }
-        else{
-            head.value=NodeValue;
-            head.next.next=null;
-            size++;
+    // Add a new node at the end
+    void add(int data) {
+        Node newNode = new Node(data);
+        
+        if (head == null) {
+            head = newNode;
+            return;
         }
 
-        // node1.value=NodeValue;
-        // node1.next=null;
+        Node current = head;
+        while (current.next != null) {
+            current = current.next;
+        }
 
-        // head=node1;
-        // tail=node1;
-
-        return head;
-
+        current.next = newNode;
     }
 
+    void printList() {
+        Node current = head;
+        while (current != null) {
+            System.out.print(current.value + " -> ");
+            current = current.next;
+        }
+        System.out.println("null");
+    }
+
+}
+
+class SinglyLinkedList1{
     public static void main(String[] args) {
 
-
-        SinglyLinkedList1 sll = new SinglyLinkedList1();
-        sll.createSinglyLinkedList(2);
-        sll.createSinglyLinkedList(4);
-
-        while(head!=null){
-            System.out.println(head.value);
-            head=head.next;
-        }
-
-
+        LinkedList l = new LinkedList();
+        l.add(2);
+        l.add(4);
+        l.printList();
     }
 }
