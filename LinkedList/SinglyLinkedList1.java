@@ -46,6 +46,9 @@ class SinglyLinkedList1{
         LinkedList l = new LinkedList();
         l.add(2);
         l.add(4);
+        l.add(6);
+        l.add(8);
+        l.add(10);
         l.printList();
     }
 }
