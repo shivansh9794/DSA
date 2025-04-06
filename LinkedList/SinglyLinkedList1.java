@@ -30,12 +30,13 @@ class LinkedList{
     }
 
     void printList() {
-        
+
         Node current = head;
         while (current != null) {
             System.out.print(current.value + " -> ");
             current = current.next;
         }
+        
         System.out.println("null");
     }
 
