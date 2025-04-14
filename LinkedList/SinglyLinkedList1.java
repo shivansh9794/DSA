@@ -14,7 +14,7 @@ class LinkedList{
 
     // Add a new node at the end
     void add(int data) {
-        Node newNode = new Node(data);
+        Node newNode = new Node(data);  // creating a new node
         
         if (head == null) {
             head = newNode;
@@ -22,7 +22,7 @@ class LinkedList{
         }
 
         Node current = head;
-        while (current.next != null) {
+        while (current.next != null) {  // iterating thorough Whole LL to see which is a last node
             current = current.next;
         }
 
