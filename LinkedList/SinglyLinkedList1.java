@@ -51,6 +51,7 @@ class SinglyLinkedList1{
         l.add(6);
         l.add(8);
         l.add(10);
+        
         l.printList();
     }
 }   
